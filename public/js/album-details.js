@@ -25,6 +25,22 @@ document.addEventListener('DOMContentLoaded', async () => {
             <p>${album.description}</p>
         `;
 
+        // Display comments
+        const commentsList = document.getElementById('commentsList');
+        commentsList.innerHTML = '';
+
+        //Don't display comments if there are none otherwise an error will be thrown
+        if (album.comments && album.comments.length > 0) {
+            album.comments.forEach(comment => {
+                const commentElement = `
+                    <div class="comment">
+                        <p><strong>${comment.user}</strong>: ${comment.comment}</p>
+                    </div>
+                `;
+                commentsList.insertAdjacentHTML('beforeend', commentElement);
+            });
+        }
+
     } catch (error) {
         console.error('Error fetching album data:', error); // Log any errors to the console
         alert('An error occurred while fetching album data. Please try again later.'); // Alert the user about the error
