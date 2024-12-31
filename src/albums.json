@@ -1,0 +1,38 @@
+[
+    {
+        "name": "Meddle",
+        "artist": "Pink Floyd",
+        "year": "1971",
+        "cover": "images/meddle.jpeg"
+    },
+    {
+        "name": "You",
+        "artist": "Gong",
+        "year": "1974",
+        "cover": "images/you.jpg"
+    },
+    {
+        "name": "A Wizard, a True Star",
+        "artist": "Todd Rundgren",
+        "year": "1973",
+        "cover": "images/a-wizard-a-true-star.png"
+    },
+    {
+        "name": "Led Zeppelin IV",
+        "artist": "Led Zeppelin",
+        "year": "1971",
+        "cover": "images/led-zeppelin-iv.jpg"
+    },
+    {
+        "name": "All Things Must Pass",
+        "artist": "George Harrison",
+        "year": "1970",
+        "cover": "images/all-things-must-pass.jpg"
+    },
+    {
+        "name": "Surf's Up",
+        "artist": "The Beach Boys",
+        "year": "1971",
+        "cover": "images/surfs-up.jpg"
+    }
+]
