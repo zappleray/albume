@@ -8,21 +8,54 @@ app.use(express.static(path.join(__dirname, '../public')));
 // Middleware to parse JSON request bodies
 app.use(express.json());
 
-// Route to get album data
-app.get('/api/albums', (req, res) => {
-    // Read the album data from the 'albums.json' file
+// Helper function to read the albums.json file
+const readAlbumsFile = (callback) => {
     fs.readFile(path.join(__dirname, 'albums.json'), 'utf8', (err, data) => {
         if (err) {
-            // Send a 500 error response if there is an error reading the file
+            // If there is an error reading the file, call the callback with the error
+            callback(err, null);
+            return;
+        }
+        // Parse the JSON data from the file
+        const albums = JSON.parse(data);
+        // Call the callback with the parsed albums data
+        callback(null, albums);
+    });
+};
+
+// Route to get all album data
+app.get('/api/albums', (req, res) => {
+    // Use the helper function to read the albums.json file
+    readAlbumsFile((err, albums) => {
+        if (err) {
+            // If there is an error reading the file, send a 500 status code with an error message
             res.status(500).send('Error reading album data');
             return;
         }
+        // Send the parsed albums data as a JSON response
+        res.json(albums);
+    });
+});
 
-        console.log("Data",data);
-        console.log("JSON.parse(data)",JSON.parse(data));
-
-        // Send the parsed JSON data as the response
-        res.json(JSON.parse(data));
+// Route to get a specific album by ID
+app.get('/api/albums/:id', (req, res) => {
+    const albumId = req.params.id; // Get the album ID from the request parameters
+    // Use the helper function to read the albums.json file
+    readAlbumsFile((err, albums) => {
+        if (err) {
+            // If there is an error reading the file, send a 500 status code with an error message
+            res.status(500).send('Error reading album data');
+            return;
+        }
+        // Find the album with the specified ID
+        const album = albums.find(a => a.id == albumId);
+        if (!album) {
+            // If the album is not found, send a 404 status code with an error message
+            res.status(404).send('Album not found');
+            return;
+        }
+        // Send the found album data as a JSON response
+        res.json(album);
     });
 });
 

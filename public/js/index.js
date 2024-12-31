@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             albumsToDisplay.forEach(album => {
                 const albumCard = `
                     <div class="col-md-4 mb-4 d-flex">
-                        <div class="card flex-fill">
+                        <div class="card flex-fill" data-album-id="${album.id}">
                             <img src="${album.cover}" class="card-img-top" alt="Album Cover">
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title">${album.name}</h5>
@@ -30,6 +30,17 @@ document.addEventListener('DOMContentLoaded', async () => {
                 `;
                 // Insert the album card into the album list
                 albumList.insertAdjacentHTML('beforeend', albumCard);
+            });
+
+            // Add click event listener to each album card
+            document.querySelectorAll('.card').forEach(card => {
+                // For each card, add an event listener for the 'click' event
+                card.addEventListener('click', (event) => {
+                    // Get the album ID from the 'data-album-id' attribute of the clicked card
+                    const albumId = event.currentTarget.getAttribute('data-album-id');
+                    // Redirect to the album details page with the album ID as a query parameter
+                    window.location.href = `album-details.html?id=${albumId}`;
+                });
             });
         };
 
