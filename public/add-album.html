@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+    Want this to be a popup window in the home page instead.
+    How to deal with the matter of the cover image? 
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Albume</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Albume</a>
+            <a href="add-album.html" class="btn btn-success ml-auto">
+                <i class="fas fa-plus"></i> Add Album
+            </a>
+        </div>
+    </nav>
+    <main class="container my-5">
+        <h1 class="text-center">Add Album</h1>
+        <form action="/submit-album" method="post">
+            <div class="form-group">
+                <label for="album-title">Album Title:</label>
+                <input type="text" class="form-control" id="album-title" name="album-title" required>
+            </div>
+            <div class="form-group">
+                <label for="artist-name">Artist Name:</label>
+                <input type="text" class="form-control" id="artist-name" name="artist-name" required>
+            </div>
+            <div class="form-group">
+                <label for="release-date">Release Date:</label>
+                <input type="date" class="form-control" id="release-date" name="release-date" required>
+            </div>
+            <br>
+            <div class="text-right">
+                <button type="submit" class="btn btn-primary">Add Album</button>
+            </div>
+        </form>
+    </main>
+</body>
+</html>
