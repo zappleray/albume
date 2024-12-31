@@ -59,6 +59,41 @@ app.get('/api/albums/:id', (req, res) => {
     });
 });
 
+// Route to add a comment to a specific album by ID
+app.post('/api/albums/:id/comments', (req, res) => {
+    const albumId = req.params.id; // Get the album ID from the request parameters
+    const newComment = req.body; // Get the new comment from the request body
+
+    // Use the helper function to read the albums.json file
+    readAlbumsFile((err, albums) => {
+        if (err) {
+            res.status(500).send('Error reading album data');
+            return;
+        }
+
+        // Find the album with the specified ID
+        const album = albums.find(a => a.id == albumId);
+        if (!album) {
+            res.status(404).send('Album not found');
+            return;
+        }
+
+        // Add the new comment to the album's comments array
+        album.comments.push(newComment);
+
+        // Write the updated albums data back to the albums.json file
+        fs.writeFile(path.join(__dirname, 'albums.json'), JSON.stringify(albums, null, 2), (err) => {
+            if (err) {
+                res.status(500).send('Error saving comment');
+                return;
+            }
+
+            // Send the updated album data as a JSON response
+            res.json(album);
+        });
+    });
+});
+
 // ... add other routes
 
 // Export the app module

@@ -1,96 +1,108 @@
 [
-    {
-        "id" : 1,
-        "name": "Meddle",
-        "artist": "Pink Floyd",
-        "year": "1971",
-        "cover": "images/meddle.jpeg",
-        "description": "Meddle is the sixth studio album by English rock band Pink Floyd, released on 31 October 1971 by Harvest Records. The album was produced between the band's touring commitments, from January to August 1971 at a series of locations around London, including Abbey Road Studios and Morgan Studios.",
-        "comments": [
-            {
-                "user": "John Doe",
-                "comment": "Love getting totally baked to this dude!"
-            },
-            {
-                "user": "Jane Smith",
-                "comment": "A masterpiece."
-            }
-        ]
-    },
-    {
-        "id": 2,
-        "name": "You",
-        "artist": "Gong",
-        "year": "1974",
-        "cover": "images/you.jpg",
-        "description": "You is the fifth studio album by the progressive rock band Gong, released by Virgin Records in October 1974. It is the last album by Daevid Allen's Gong until 1992's Shapeshifter. Recorded at Virgin's Manor Studios in Oxfordshire, England, side 1 was mixed at Pye Studios, Marble Arch, London, while side 2 was mixed at The Manor.",
-        "comments": [
-            {
-                "user": "Alice Cooper",
-                "comment": "A psychedelic journey!"
-            },
-            {
-                "user": "Bob Marley",
-                "comment": "Great vibes and energy."
-            }
-        ]
-    },
-    {
-        "id": 3,
-        "name": "A Wizard, a True Star",
-        "artist": "Todd Rundgren",
-        "year": "1973",
-        "cover": "images/a-wizard-a-true-star.png",
-        "description": "A Wizard, a True Star is the fourth album by Todd Rundgren, released on March 2, 1973. Its music is a significant departure from his previous album Something/Anything? (1972), which consisted mostly of straightforward ballads. This LP is equally diverse, with complex and varied arrangements, and its fusion of rock and pop styles, including progressive rock, blue-eyed soul, electronic music, and bossa nova, is made more cohesive by Rundgren's self-consciously introspective lyrics.",
-        "comments": [
-            {
-                "user": "David Bowie",
-                "comment": "Innovative and ahead of its time."
-            }
-        ]
-    },
-    {
-        "id": 4,
-        "name": "Led Zeppelin IV",
-        "artist": "Led Zeppelin",
-        "year": "1971",
-        "cover": "images/led-zeppelin-iv.jpg",
-        "description": "Led Zeppelin IV is the fourth studio album by the English rock band Led Zeppelin. It was released on 8 November 1971 by Atlantic Records. The album was produced by guitarist Jimmy Page and recorded between December 1970 and February 1971, largely in a remote house in Wales called Bron-Yr-Aur.",
-        "comments": [
-            {
-                "user": "Jimmy Page",
-                "comment": "One of our best works!"
-            },
-            {
-                "user": "Robert Plant",
-                "comment": "Timeless and powerful."
-            }
-        ]
-    },
-    {
-        "id": 5,
-        "name": "All Things Must Pass",
-        "artist": "George Harrison",
-        "year": "1970",
-        "cover": "images/all-things-must-pass.jpg",
-        "description": "All Things Must Pass is the third studio album by English rock musician George Harrison. Released as a triple album in November 1970, it was Harrison's first solo work after the break-up of the Beatles in April that year. It includes the hit singles 'My Sweet Lord' and 'What Is Life', as well as songs such as 'Isn't It a Pity' and the title track that had been turned down by the Beatles.",
-        "comments": [
-            {
-                "user": "Paul McCartney",
-                "comment": "George's finest work."
-            },
-            {
-                "user": "Ringo Starr",
-                "comment": "Beautiful and heartfelt."
-            }
-        ]
-    },
-    {
-        "id" : 6,
-        "name": "Surf's Up",
-        "artist": "The Beach Boys",
-        "year": "1971",
-        "cover": "images/surfs-up.jpg",
-        "description": "Surf's Up is the Beach Boys' seventeenth studio album, released in 1971. It was met with a warm critical reception and reached number 29 on the US record charts, becoming their highest-charting LP in the US in over five years. In the UK, Surf's Up peaked at number 15, continuing a string of top 40 records that had not abated since 1965."
-    }
+  {
+    "id": 1,
+    "name": "Meddle",
+    "artist": "Pink Floyd",
+    "year": "1971",
+    "cover": "images/meddle.jpeg",
+    "description": "Meddle is the sixth studio album by English rock band Pink Floyd, released on 31 October 1971 by Harvest Records. The album was produced between the band's touring commitments, from January to August 1971 at a series of locations around London, including Abbey Road Studios and Morgan Studios.",
+    "comments": [
+      {
+        "user": "John Doe",
+        "comment": "Love getting totally baked to this dude!"
+      },
+      {
+        "user": "Jane Smith",
+        "comment": "A masterpiece."
+      },
+      {
+        "user": "Anonymous",
+        "comment": "This shit is gay"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "You",
+    "artist": "Gong",
+    "year": "1974",
+    "cover": "images/you.jpg",
+    "description": "You is the fifth studio album by the progressive rock band Gong, released by Virgin Records in October 1974. It is the last album by Daevid Allen's Gong until 1992's Shapeshifter. Recorded at Virgin's Manor Studios in Oxfordshire, England, side 1 was mixed at Pye Studios, Marble Arch, London, while side 2 was mixed at The Manor.",
+    "comments": [
+      {
+        "user": "Alice Cooper",
+        "comment": "A psychedelic journey!"
+      },
+      {
+        "user": "Bob Marley",
+        "comment": "Great vibes and energy."
+      },
+      {
+        "user": "Anonymous",
+        "comment": "This shit is gay too"
+      },
+      {
+        "user": "Anonymous",
+        "comment": "yo"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "A Wizard, a True Star",
+    "artist": "Todd Rundgren",
+    "year": "1973",
+    "cover": "images/a-wizard-a-true-star.png",
+    "description": "A Wizard, a True Star is the fourth album by Todd Rundgren, released on March 2, 1973. Its music is a significant departure from his previous album Something/Anything? (1972), which consisted mostly of straightforward ballads. This LP is equally diverse, with complex and varied arrangements, and its fusion of rock and pop styles, including progressive rock, blue-eyed soul, electronic music, and bossa nova, is made more cohesive by Rundgren's self-consciously introspective lyrics.",
+    "comments": [
+      {
+        "user": "David Bowie",
+        "comment": "Innovative and ahead of its time."
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Led Zeppelin IV",
+    "artist": "Led Zeppelin",
+    "year": "1971",
+    "cover": "images/led-zeppelin-iv.jpg",
+    "description": "Led Zeppelin IV is the fourth studio album by the English rock band Led Zeppelin. It was released on 8 November 1971 by Atlantic Records. The album was produced by guitarist Jimmy Page and recorded between December 1970 and February 1971, largely in a remote house in Wales called Bron-Yr-Aur.",
+    "comments": [
+      {
+        "user": "Jimmy Page",
+        "comment": "One of our best works!"
+      },
+      {
+        "user": "Robert Plant",
+        "comment": "Timeless and powerful."
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "All Things Must Pass",
+    "artist": "George Harrison",
+    "year": "1970",
+    "cover": "images/all-things-must-pass.jpg",
+    "description": "All Things Must Pass is the third studio album by English rock musician George Harrison. Released as a triple album in November 1970, it was Harrison's first solo work after the break-up of the Beatles in April that year. It includes the hit singles 'My Sweet Lord' and 'What Is Life', as well as songs such as 'Isn't It a Pity' and the title track that had been turned down by the Beatles.",
+    "comments": [
+      {
+        "user": "Paul McCartney",
+        "comment": "George's finest work."
+      },
+      {
+        "user": "Ringo Starr",
+        "comment": "Beautiful and heartfelt."
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Surf's Up",
+    "artist": "The Beach Boys",
+    "year": "1971",
+    "cover": "images/surfs-up.jpg",
+    "description": "Surf's Up is the Beach Boys' seventeenth studio album, released in 1971. It was met with a warm critical reception and reached number 29 on the US record charts, becoming their highest-charting LP in the US in over five years. In the UK, Surf's Up peaked at number 15, continuing a string of top 40 records that had not abated since 1965."
+  }
 ]

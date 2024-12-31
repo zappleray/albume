@@ -10,39 +10,73 @@ document.addEventListener('DOMContentLoaded', async () => {
         return; // Exit the function if the album ID is missing
     }
 
-    try {
-        // Fetch album data for the specific album by ID
-        const response = await fetch(`/api/albums/${albumId}`);
-        const album = await response.json(); // Parse the JSON response
+    const fetchAlbumData = async () => {
+        try {
+            // Fetch album data for the specific album by ID
+            const response = await fetch(`/api/albums/${albumId}`);
+            const album = await response.json(); // Parse the JSON response
 
-        // Display album details
-        const albumDetails = document.getElementById('albumDetails');
-        albumDetails.innerHTML = `
-            <img src="${album.cover}" class="img-fluid mb-4" alt="Album Cover">
-            <h2>${album.name}</h2>
-            <h4>${album.artist}</h4>
-            <p>${album.year}</p>
-            <p>${album.description}</p>
-        `;
+            // Display album details
+            const albumDetails = document.getElementById('albumDetails');
+            albumDetails.innerHTML = `
+                <img src="${album.cover}" class="img-fluid mb-4" alt="Album Cover">
+                <h2>${album.name}</h2>
+                <h4>${album.artist}</h4>
+                <p>${album.year}</p>
+                <p>${album.description}</p>
+            `;
 
-        // Display comments
-        const commentsList = document.getElementById('commentsList');
-        commentsList.innerHTML = '';
+            // Display comments
+            const commentsList = document.getElementById('commentsList');
+            commentsList.innerHTML = '';
 
-        //Don't display comments if there are none otherwise an error will be thrown
-        if (album.comments && album.comments.length > 0) {
-            album.comments.forEach(comment => {
-                const commentElement = `
-                    <div class="comment">
-                        <p><strong>${comment.user}</strong>: ${comment.comment}</p>
-                    </div>
-                `;
-                commentsList.insertAdjacentHTML('beforeend', commentElement);
-            });
+            //Don't display comments if there are none otherwise an error will be thrown
+            if (album.comments && album.comments.length > 0) {
+                album.comments.forEach(comment => {
+                    const commentElement = `
+                        <div class="comment">
+                            <p><strong>${comment.user}</strong>: ${comment.comment}</p>
+                        </div>
+                    `;
+                    commentsList.insertAdjacentHTML('beforeend', commentElement);
+                    console.log(comment);
+                });
+            }
+
+        } catch (error) {
+            console.error('Error fetching album data:', error); // Log any errors to the console
+            alert('An error occurred while fetching album data. Please try again later.'); // Alert the user about the error
         }
+    };
 
-    } catch (error) {
-        console.error('Error fetching album data:', error); // Log any errors to the console
-        alert('An error occurred while fetching album data. Please try again later.'); // Alert the user about the error
-    }
+    await fetchAlbumData();
+
+    const addCommentBtn = document.getElementById('addCommentBtn');
+    addCommentBtn.addEventListener('click', async () => {
+        const newCommentText = document.getElementById('newComment').value;
+        const newComment = {
+            user: 'Anonymous', // You can replace this with the actual user's name if available
+            comment: newCommentText
+        };
+
+        try {
+            const response = await fetch(`/api/albums/${albumId}/comments`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(newComment)
+            });
+
+            if (response.ok) {
+                await fetchAlbumData(); // Re-fetch the album data and re-render the comments
+                document.getElementById('newComment').value = ''; // Clear the textarea
+            } else {
+                alert('Error adding comment');
+            }
+        } catch (error) {
+            console.error('Error adding comment:', error);
+            alert('An error occurred while adding the comment. Please try again later.');
+        }
+    });
 });

@@ -1,11 +1,14 @@
-/* Ensure the card takes full height of the column */
 .card {
     display: flex;
     flex-direction: column;
     height: 100%;
 }
 
-/* Ensure the card body takes the remaining space and aligns content at the bottom */
+.card:hover {
+    transform: scale(1.04);
+    transition: transform 0.3s ease-in-out;
+}
+
 .card-body {
     flex: 1;
     display: flex;
