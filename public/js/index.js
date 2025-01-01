@@ -5,9 +5,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     try {
         // Fetch album data from the server
         const response = await fetch('/api/albums');
-        console.log("Response", response);
+        console.log('Response', response);
         albums = await response.json(); // Parse the JSON response
-        console.log("Response.json", albums);
+        console.log('Response.json', albums);
 
         // Function to display albums
         const displayAlbums = (albumsToDisplay) => {
