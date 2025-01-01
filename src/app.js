@@ -33,7 +33,7 @@ app.get('/api/albums', (req, res) => {
             return;
         }
         // Send the parsed albums data as a JSON response
-        res.json(albums);
+        res.status(200).json(albums);
     });
 });
 
@@ -55,7 +55,7 @@ app.get('/api/albums/:id', (req, res) => {
             return;
         }
         // Send the found album data as a JSON response
-        res.json(album);
+        res.status(200).json(album);
     });
 });
 
@@ -87,14 +87,37 @@ app.post('/api/albums/:id/comments', (req, res) => {
                 res.status(500).send('Error saving comment');
                 return;
             }
-
-            // Send the updated album data as a JSON response
-            res.json(album);
+			res.status(200).send('Comment added successfully');
         });
     });
 });
 
-// ... add other routes
+// Route to submit a new album
+app.post('/api/submit-album', (req, res) => {
+	const newAlbum = req.body; // Get the new album data from the request body
+
+	// Use the helper function to read the albums.json file
+	readAlbumsFile((err, albums) => {
+		if (err) {
+			res.status(500).send('Error reading album data');
+			return;
+		}
+
+		// Generate a new unique ID for the album
+		newAlbum.id = albums.length + 1;
+		// Add the new album to the albums array
+		albums.push(newAlbum);
+
+		// Write the updated albums data back to the albums.json file
+		fs.writeFile(path.join(__dirname, 'albums.json'), JSON.stringify(albums, null, 2), (err) => {
+			if (err) {
+				res.status(500).send('Error saving album');
+				return;
+			}
+			res.status(200).send('Album added successfully');
+		});
+	});
+});
 
 // Export the app module
 module.exports = app;

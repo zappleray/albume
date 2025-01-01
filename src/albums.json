@@ -17,7 +17,15 @@
       },
       {
         "user": "Anonymous",
-        "comment": "This shit is gay"
+        "comment": "This shit is fire"
+      },
+      {
+        "user": "Anonymous",
+        "comment": "Legendary"
+      },
+      {
+        "user": "Anonymous",
+        "comment": "Cool"
       }
     ]
   },
@@ -39,7 +47,7 @@
       },
       {
         "user": "Anonymous",
-        "comment": "This shit is gay too"
+        "comment": "This is mad."
       },
       {
         "user": "Anonymous",
@@ -98,6 +106,10 @@
       {
         "user": "Anonymous",
         "comment": "I love this man!"
+      },
+      {
+        "user": "Anonymous",
+        "comment": "New comment"
       }
     ]
   },
@@ -107,6 +119,35 @@
     "artist": "The Beach Boys",
     "year": "1971",
     "cover": "images/surfs-up.jpg",
-    "description": "Surf's Up is the Beach Boys' seventeenth studio album, released in 1971. It was met with a warm critical reception and reached number 29 on the US record charts, becoming their highest-charting LP in the US in over five years. In the UK, Surf's Up peaked at number 15, continuing a string of top 40 records that had not abated since 1965."
+    "description": "Surf's Up is the Beach Boys' seventeenth studio album, released in 1971. It was met with a warm critical reception and reached number 29 on the US record charts, becoming their highest-charting LP in the US in over five years. In the UK, Surf's Up peaked at number 15, continuing a string of top 40 records that had not abated since 1965.",
+    "comments": []
+  },
+  {
+    "id": 7,
+    "name": "My new Album",
+    "artist": "Me",
+    "year": "2006",
+    "cover": "images/placeholder-album-cover.jpg",
+    "description": "Testing testing testing",
+    "comments": [
+      {
+        "user": "Anonymous",
+        "comment": "This is mine!"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Another new album",
+    "artist": "Me",
+    "year": "2025",
+    "cover": "images/placeholder-album-cover.jpg",
+    "description": "Yoooooo",
+    "comments": [
+      {
+        "user": "Anonymous",
+        "comment": "Cool stuff"
+      }
+    ]
   }
 ]

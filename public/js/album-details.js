@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     addCommentBtn.addEventListener('click', async () => {
         const newCommentText = document.getElementById('newComment').value;
         const newComment = {
-            user: 'Anonymous', // You can replace this with the actual user's name if available
+            user: 'Anonymous',
             comment: newCommentText
         };
 

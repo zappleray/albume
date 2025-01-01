@@ -1,11 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!--
-    Want this to be a popup window in the home page instead.
-    How to deal with the matter of the cover image? 
--->
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,7 +21,10 @@
     </nav>
     <main class="container my-5">
         <h1 class="text-center">Add Album</h1>
-        <form action="/submit-album" method="post">
+        <div id="success-banner" class="alert alert-success" role="alert" style="display: none;">
+            Album added successfully!
+        </div>
+        <form action="/submit-album" class="mt-4 border border-dark p-3 rounded bg-light" method="post">
             <div class="form-group">
                 <label for="album-title">Album Title:</label>
                 <input type="text" class="form-control" id="album-title" name="album-title" required>
@@ -37,7 +35,11 @@
             </div>
             <div class="form-group">
                 <label for="release-date">Release Date:</label>
-                <input type="date" class="form-control" id="release-date" name="release-date" required>
+                <input type="text" class="form-control" id="release-date" name="release-date" required>
+            </div>
+            <div class="form-group">
+                <label for="album-description">Album Description:</label>
+                <textarea class="form-control" id="album-description" name="album-description" rows="3" required></textarea>
             </div>
             <br>
             <div class="text-right">
@@ -45,5 +47,7 @@
             </div>
         </form>
     </main>
+    <!-- Scripts -->
+    <script src="js/add-album.js"></script>
 </body>
 </html>

@@ -19,3 +19,10 @@
 .comment {
     margin-bottom: 10px;
 }
+
+#success-banner {
+    position: relative;
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+}
