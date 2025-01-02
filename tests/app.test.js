@@ -21,6 +21,7 @@ describe('API Routes', () => {
         const albumId = 1; // Use an existing album ID
         const response = await request(app).get(`/api/albums/${albumId}`);
         expect(response.status).toBe(200);
+        expect(response.headers['content-type']).toMatch(/json/);
         expect(response.body).toHaveProperty('id', albumId);
     });
 
