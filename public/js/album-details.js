@@ -54,8 +54,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     const addCommentBtn = document.getElementById('addCommentBtn');
     addCommentBtn.addEventListener('click', async () => {
         const newCommentText = document.getElementById('newComment').value;
+        const newCommenterName = document.getElementById('commenterName').value;
+
         const newComment = {
-            user: 'Anonymous',
+            user: newCommenterName,
             comment: newCommentText
         };
 

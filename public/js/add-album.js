@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (response.ok) {
                 // Show the success banner
                 successBanner.style.display = 'block';
-                // Clear the form or redirect
+                // Clear the form then redirect
                 form.reset();
                 setTimeout(() => {
                     window.location.href = 'index.html';

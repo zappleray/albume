@@ -26,6 +26,42 @@
       {
         "user": "Anonymous",
         "comment": "Cool"
+      },
+      {
+        "user": "Oscar",
+        "comment": "Good with acid"
+      },
+      {
+        "user": "Test User",
+        "comment": "Test comment"
+      },
+      {
+        "user": "Test User",
+        "comment": "Test comment"
+      },
+      {
+        "user": "Test User",
+        "comment": "Test comment"
+      },
+      {
+        "user": "Osxar",
+        "comment": "blah"
+      },
+      {
+        "user": "asdad",
+        "comment": "afasda"
+      },
+      {
+        "user": "test_user",
+        "comment": "test_comment"
+      },
+      {
+        "user": "test_user",
+        "comment": "test_comment"
+      },
+      {
+        "user": "test_user",
+        "comment": "test_comment"
       }
     ]
   },
@@ -110,6 +146,10 @@
       {
         "user": "Anonymous",
         "comment": "New comment"
+      },
+      {
+        "user": "Anonymous",
+        "comment": "George is the best Beatle"
       }
     ]
   },
@@ -149,5 +189,14 @@
         "comment": "Cool stuff"
       }
     ]
+  },
+  {
+    "id": 9,
+    "name": "test_name",
+    "artist": "test_artist",
+    "year": "test_album",
+    "cover": "images/placeholder-album-cover.jpg",
+    "description": "test_description",
+    "comments": []
   }
 ]
