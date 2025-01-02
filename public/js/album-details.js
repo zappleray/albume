@@ -53,8 +53,13 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     const addCommentBtn = document.getElementById('addCommentBtn');
     addCommentBtn.addEventListener('click', async () => {
-        const newCommentText = document.getElementById('newComment').value;
-        const newCommenterName = document.getElementById('commenterName').value;
+        const newCommentText = document.getElementById('newComment').value.trim();
+        const newCommenterName = document.getElementById('commenterName').value.trim();
+
+        if (!newCommentText || !newCommenterName) {
+            alert('Please fill in both the comment and your name before submitting.');
+            return;
+        }
 
         const newComment = {
             user: newCommenterName,
