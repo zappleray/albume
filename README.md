@@ -206,7 +206,7 @@ This endpoint allows you to submit a new album.
 - Method: POST
 - Headers:
   - Content-Type: application/json
--Body:
+- Body:
 | Property       | Type     | Description                                                                 |
 |----------------|----------|-----------------------------------------------------------------------------|
 | `id`           | Integer  | The ID of the album.                                                       |
