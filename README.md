@@ -181,7 +181,7 @@ This endpoint allows the user to add a comment to a specific album.
 ---
 
 ### Request
-#### Path: id
+#### **Parameter**: The `id` parameter in the URL should be a **positive integer**.
 #### Body:
 ```json
 {
@@ -203,10 +203,11 @@ This endpoint allows you to submit a new album.
 ---
 
 ### Request
-- Method: POST
-- Headers:
-  - Content-Type: application/json
-- Body:
+- **Method**: POST
+- **Headers**:
+  - `Content-Type`: application/json
+- **Body**:
+
 | Property       | Type     | Description                                                                 |
 |----------------|----------|-----------------------------------------------------------------------------|
 | `id`           | Integer  | The ID of the album.                                                       |
